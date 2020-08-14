@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ind.css" rel="stylesheet">
+    <script src="ind.js"></script>
+    <title>TIMETABLE</title>
+</head>
+<body>
+    <nav>
+        <form id="frm1">
+            LECTURES AND TUTORIALS:
+            <br>
+            COURSE ID: <br><input type="text" name="courseId" id="courseId"><br>
+            COURSE NAME: <br><input type="text" name="courseName" id="courseName"><br>
+            PROFESSOR: <br><input type="text" name="prof" id="prof"><br>
+            DAYS: <br><input type="text" name="days" id="days"><br>
+            HOURS: <br><input type="text"  name="hrs" id="hrs"><br><br>
+            <input type="button" onclick="myFunction()" value="Submit" style="width: 6vw; font-size:1vw;">
+            <input type="button" onclick="clear()" value="Clear" style="width: 6vw; font-size:1vw;">
+            <hr>
+            LABS AND WORKSHOP:
+            <br>
+            COURSE ID: <br><input type="text" name="courseId1" id="courseId1"><br>
+            COURSE NAME: <br><input type="text" name="courseName1" id="courseName1"><br>
+            PROFESSOR: <br><input type="text" name="prof1" id="prof1"><br>
+            DAYS: <br><input type="text" name="days1" id="days1"><br>
+            HOURS: <br><input type="text"  name="hrs1" id="hrs1" style="width: 6vw;">to<input type="text"  name="hrs2" id="hrs2" style="width: 6vw;"><br><br>
+            <input type="button" onclick="myFunction1()" value="Submit" style="width: 6vw; font-size:1vw;">
+            <input type="button" onclick="clear1()" value="Clear" style="width: 6vw; font-size:1vw;">
+            <input type="button" onclick="clearAll()" value="Clear All" style="width: 6vw; font-size:1vw;">
+        </form>
+    </nav>
+    <section>
+        <p>
+            TIMETABLE
+        </p>
+        <table id="tab">
+                <tr id="row-0">
+                    <td class="r-0"></td>
+                    <td class="r-1">1</td>
+                    <td class="r-2">2</td>
+                    <td class="r-3">3</td>
+                    <td class="r-4">4</td>
+                    <td class="r-5">5</td>
+                    <td class="r-6">6</td>
+                    <td class="r-7">7</td>
+                    <td class="r-8">8</td>
+                    <td class="r-9">9</td>
+                    <td class="r-10">10</td>
+                </tr>
+                <tr id="row-1">
+                    <td class="r-0">MONDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+                <tr id="row-2">
+                    <td class="r-0">TUESDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+                <tr id="row-3">
+                    <td class="r-0">WEDNESDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+                <tr id="row-4">
+                    <td class="r-0">THURSDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+                <tr id="row-5">
+                    <td class="r-0">FRIDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+                <tr id="row-6">
+                    <td class="r-0">SATURDAY</td>
+                    <td class="r-1"></td>
+                    <td class="r-2"></td>
+                    <td class="r-3"></td>
+                    <td class="r-4"></td>
+                    <td class="r-5"></td>
+                    <td class="r-6"></td>
+                    <td class="r-7"></td>
+                    <td class="r-8"></td>
+                    <td class="r-9"></td>
+                    <td class="r-10"></td>
+                </tr>
+        </table>
+        <div id="pdf">
+            <!-- <input type="button" onclick="createPDF()" value="create PDF" style="width: auto; font-size:1vw;"> -->
+            <input type="button" id="btnExport" value="Export as PDF" onclick="Export()" style="width: auto; font-size:1vw;">
+        </div>
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+body{
+    margin: auto;
+    padding: 0;
+}
+
+main {
+    margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table{
+    height: 75vh;
+    table-layout: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vh;
+}
+
+#tabdiv{
+    width: 80vw;
+    text-align: center;
+    border: 3px outset;
+}
+
+section p{
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font: italic;
+    padding-left: 7vw;
+}
+
+.r-0{
+    width: 6vw;
+    text-align: left;
+    padding-top: 1vw;
+}
+
+td{
+    width: 7.4vw;
+    text-align: center;
+}
+
+nav{
+	box-sizing:border-box;
+	border: 1px solid #06425C;
+	color:#06425C;
+	background-color:#486B02;
+	display: inline-block;
+	width: 20vw;
+	/* min-width: 125px; */
+	margin-right:15px;
+	height:100vh;
+	overflow: auto;
+}
+
+nav form{
+	display:block;
+	line-height: 45px;
+	height:45px;
+	color: #FFFFFF;
+	background-color:#486B02;
+	text-decoration: none;
+	background-color:#486B02;
+	padding-left: 3vw;
+    margin:5px 0 10px 5px;
+}
+nav form input{
+    width: 12vw;
+}
+
+section{
+	display: inline-block;
+	width:70%;
+	height:100vh;
+	overflow: auto;
+}
+
+#pdf{
+    margin-right: auto;
+    margin-left: auto;
+}
