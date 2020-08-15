@@ -1,6 +1,7 @@
 body{
     margin: auto;
     padding: 0;
+    height: 100vh;
 }
 
 main {
@@ -20,22 +21,19 @@ table{
     table-layout: auto;
     margin-left: auto;
     margin-right: auto;
-    padding: 3vh;
+    padding: 1vh;
 }
 
 #tabdiv{
-    width: 80vw;
-    text-align: center;
+/*     width: 80vw; */
     border: 3px outset;
-}
-
-section p{
     font-size: 5vh;
     font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font: italic;
     padding-left: 7vw;
 }
+
 
 .r-0{
     width: 4vw;
@@ -85,6 +83,8 @@ section{
 }
 
 #pdf{
+    padding-left: 30vw;
+    padding-top: 2vh;
     margin-right: auto;
     margin-left: auto;
 }
