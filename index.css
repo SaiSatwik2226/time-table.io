@@ -38,13 +38,14 @@ section p{
 }
 
 .r-0{
-    width: 6vw;
-    text-align: left;
+    width: 4vw;
+    text-align: center;
     padding-top: 1vw;
 }
 
 td{
-    width: 7.4vw;
+    min-width: 5vw;
+    max-width: 7.4vw;
     text-align: center;
 }
 

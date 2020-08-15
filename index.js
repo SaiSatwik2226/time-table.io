@@ -72,7 +72,7 @@ function clear1(){
     document.getElementById("hrs1").value = "";
     document.getElementById("hrs2").value = "";
 }
-function clear1(){
+function clear(){
     document.getElementById("courseId").value = "";
     document.getElementById("courseName").value = "";
     document.getElementById("prof").value = "";
@@ -85,7 +85,7 @@ function clearAll(){
     clear();
 }
 
-function Export() {
+function exportPDF() {
     html2canvas(document.getElementById('tab'), {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
@@ -99,3 +99,64 @@ function Export() {
         }
     });
 }
+
+/* 
+function createPDF() {
+    var sTable = document.getElementById('tab').innerHTML;
+
+    // CREATE A WINDOW OBJECT.
+    var win = window.open('', '', 'height=1000,width=1000');
+    
+    var style1 = "<style>";
+        style1 = style1 + "table {width: 100%;font: 17px Calibri;}";
+        style1 = style1 + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+        style1 = style1 + "padding: 2px 3px;text-align: center;}";
+        style1 = style1 + "</style>";
+
+    win.document.write('<html><head>');
+    win.document.write('<title>Profile</title>');   // <title> FOR PDF HEADER.
+    win.document.write(style1);          // ADD STYLE INSIDE THE HEAD TAG.
+    win.document.write('</head>');
+    win.document.write('<body>');
+    win.document.write(sTable);         // THE TABLE CONTENTS INSIDE THE BODY TAG.
+    win.document.write('</body></html>');
+
+    win.document.close(); 	// CLOSE THE CURRENT WINDOW.
+
+    win.print();    // PRINT THE CONTENTS.
+}
+ */
+//"<style> table {width: 100%;font: 17px Calibri;} table, th, td {border: solid 1px #DDD; border-collapse: collapse; padding: 2px 3px;text-align: center;} </style>"
+
+
+/* function createPDF(){
+    if (window.navigator.msSaveBlob()){
+        window.navigator.msSaveBlob(tab.msSaveBlob(), 'timetable.png');
+    }
+    else{
+        const a =document.createElement('a');
+
+        document.body.appendChild(a);
+        a.hreff = tab.toDataURL();
+        a.download = 'timetable.png'
+        a.click();
+        document.body.removeChild(a);
+
+    }
+} */
+
+
+/* document.getElementsByTagName("td").addEventListener("onclick", this.erase());
+
+this.erase = function(){
+  alert(this.innerHTML);
+};
+
+
+document.getElementsById("row-1").cells[4].addEventListener("click", this.handleCellClick.bind(this));
+alert(document.getElementsById("row-1").cells[4].innerHTML)
+
+this.handleCellClick = function(e)
+    {
+        alert(e.innerHTML);
+    } */

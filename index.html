@@ -6,6 +6,27 @@
     <link href="index.css" rel="stylesheet">
     <link rel="icon" href="timetable1.png">
     <script src="index.js"></script>
+
+    <!-- <script src="html2canvas.js"></script>
+    <script>
+        function createtPdf(){
+            window.scrollTo(0,0);
+
+            html2canvas(document.getElementById("tab")).then(function(canvas){
+                var ajax = new XMLHttpRequest();
+                ajax.open("POST", "save-capture.php" , true);
+                ajax.setRequestHeader("Content-type" , "application/x-www-form-urlencoded");
+                ajax.send("image=" +canvas.toDataURL("image/jpeg", 0.9));
+
+                ajax.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                    }
+                };
+            });
+        }
+    </script> -->
+
     <title>TIMETABLE</title>
 </head>
 <body>
@@ -16,7 +37,7 @@
             COURSE ID: <br><input type="text" name="courseId" id="courseId"><br>
             COURSE NAME: <br><input type="text" name="courseName" id="courseName"><br>
             PROFESSOR: <br><input type="text" name="prof" id="prof"><br>
-            DAYS: <br><input type="text" name="days" id="days"><br>
+            S: <br><input type="text" name="s" id="s"><br>
             HOURS: <br><input type="text"  name="hrs" id="hrs"><br><br>
             <input type="button" onclick="myFunction()" value="Submit" style="width: 6vw; font-size:1vw;">
             <input type="button" onclick="clear()" value="Clear" style="width: 6vw; font-size:1vw;">
@@ -26,7 +47,7 @@
             COURSE ID: <br><input type="text" name="courseId1" id="courseId1"><br>
             COURSE NAME: <br><input type="text" name="courseName1" id="courseName1"><br>
             PROFESSOR: <br><input type="text" name="prof1" id="prof1"><br>
-            DAYS: <br><input type="text" name="days1" id="days1"><br>
+            S: <br><input type="text" name="s1" id="s1"><br>
             HOURS: <br><input type="text"  name="hrs1" id="hrs1" style="width: 6vw;">to<input type="text"  name="hrs2" id="hrs2" style="width: 6vw;"><br><br>
             <input type="button" onclick="myFunction1()" value="Submit" style="width: 6vw; font-size:1vw;">
             <input type="button" onclick="clear1()" value="Clear" style="width: 6vw; font-size:1vw;">
@@ -52,7 +73,7 @@
                     <td class="r-10">10</td>
                 </tr>
                 <tr id="row-1">
-                    <td class="r-0">MONDAY</td>
+                    <td class="r-0">MON</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -65,7 +86,7 @@
                     <td class="r-10"></td>
                 </tr>
                 <tr id="row-2">
-                    <td class="r-0">TUESDAY</td>
+                    <td class="r-0">TUES</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -78,7 +99,7 @@
                     <td class="r-10"></td>
                 </tr>
                 <tr id="row-3">
-                    <td class="r-0">WEDNESDAY</td>
+                    <td class="r-0">WED</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -91,7 +112,7 @@
                     <td class="r-10"></td>
                 </tr>
                 <tr id="row-4">
-                    <td class="r-0">THURSDAY</td>
+                    <td class="r-0">THURS</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -104,7 +125,7 @@
                     <td class="r-10"></td>
                 </tr>
                 <tr id="row-5">
-                    <td class="r-0">FRIDAY</td>
+                    <td class="r-0">FRI</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -117,7 +138,7 @@
                     <td class="r-10"></td>
                 </tr>
                 <tr id="row-6">
-                    <td class="r-0">SATURDAY</td>
+                    <td class="r-0">SAT</td>
                     <td class="r-1"></td>
                     <td class="r-2"></td>
                     <td class="r-3"></td>
@@ -132,12 +153,10 @@
         </table>
         <div id="pdf">
             <!-- <input type="button" onclick="createPDF()" value="create PDF" style="width: auto; font-size:1vw;"> -->
-            <input type="button" id="btnExport" value="Export as PDF" onclick="Export()" style="width: auto; font-size:1vw;">
+            <input type="button" id="btnExport" value="Export as PDF" onclick="exportPDF()" style="width: auto; font-size:1vw;">
         </div>
-        
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     </section>
-    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </body>
 </html>
