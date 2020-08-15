@@ -43,7 +43,7 @@ table{
 
 td{
     min-width: 5vw;
-    max-width: 7.4vw;
+    /* max-width: 7.4vw; */
     text-align: center;
 }
 
@@ -87,4 +87,14 @@ section{
     padding-top: 2vh;
     margin-right: auto;
     margin-left: auto;
+}
+
+
+a.export, a.export:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 8px;
 }
